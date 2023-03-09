@@ -8,23 +8,35 @@
     &-outlinelight{
         background-color: transparent;
         color: $clr-light;
-        border-color: $clr-light;      
+        border-color: $clr-light;  
+        &:hover{
+            background-color: rgba(white, .1);
+        }        
     }
     &-dark{
         background-color: transparent;
         color: $clr-light;
-        border-color: $clr-light;       
+        border-color: $clr-light;   
+        transition: 300ms;
+        &:hover{
+            background-color: rgba(white, .1);
+        } 
+
     }
     &-outlinedark{
         background-color: transparent;
         color: $clr-dark;
         border-color: $clr-dark;
-
+        &:hover{
+            background-color: rgba(white, .1);
+        } 
     }
     &-outlinegreen{
         background-color: transparent;
         color: #1E3932;
         border-color: #1E3932;
-
+        &:hover{
+            background-color: rgba(white, .1);
+        } 
     }
 }
