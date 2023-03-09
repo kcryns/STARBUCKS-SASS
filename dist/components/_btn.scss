@@ -1,0 +1,30 @@
+.btn{
+    background-color: $clr-primary;
+    padding: .6rem 1.8rem;
+    border-radius: 3rem;
+    border: 1px solid;
+    display: inline-block;
+    transition: 300ms;
+    &-outlinelight{
+        background-color: transparent;
+        color: $clr-light;
+        border-color: $clr-light;      
+    }
+    &-dark{
+        background-color: transparent;
+        color: $clr-light;
+        border-color: $clr-light;       
+    }
+    &-outlinedark{
+        background-color: transparent;
+        color: $clr-dark;
+        border-color: $clr-dark;
+
+    }
+    &-outlinegreen{
+        background-color: transparent;
+        color: #1E3932;
+        border-color: #1E3932;
+
+    }
+}
