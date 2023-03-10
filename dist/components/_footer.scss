@@ -1,0 +1,42 @@
+.footer{
+    background-color: $clr-light;
+    &__wrapper{
+        padding: 2rem ;
+        .social__media{
+            padding-bottom: 2rem;
+            img{
+                width: 3rem;
+                margin-left: 2rem;
+                cursor: pointer;
+                transition: 300ms ease-in-out;
+                &:hover{
+                    transform: translateY(-1rem);
+                }
+            }
+        }
+    }
+    &__text{
+        display: flex;
+        justify-content: space-between;
+        .privacy{
+            
+            ul{
+                display: flex;
+                li{
+                    margin-left: 2rem;
+                    margin-right: 3rem;
+                    a{
+                        font-size: 2rem;
+
+                    }
+                    &:hover a{
+                        color: $clr-primary;
+                    }
+                }
+            }
+        }
+        p{
+            font-size: 2rem;
+        }
+    }
+}

@@ -14,12 +14,12 @@
         }        
     }
     &-dark{
-        background-color: transparent;
+        background-color: $clr-dark;
         color: $clr-light;
-        border-color: $clr-light;   
+        border-color: $clr-dark;   
         transition: 300ms;
         &:hover{
-            background-color: rgba(white, .1);
+            opacity: .8;
         } 
 
     }
@@ -28,7 +28,7 @@
         color: $clr-dark;
         border-color: $clr-dark;
         &:hover{
-            background-color: rgba(white, .1);
+            background-color: darken($clr-light, 5);
         } 
     }
     &-outlinegreen{

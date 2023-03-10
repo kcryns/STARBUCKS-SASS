@@ -245,14 +245,12 @@
                 }
             }
         }
-        &:nth-child(2){
-            margin: 3rem 0;
-        }
     }
     @include mediaQuery($break-lg){
         &__wrapper{
             @include grid(5, 0rem);
-            align-items: center;
+            align-items: start;
+            
 
         }
         &__item{
@@ -267,6 +265,7 @@
                 max-height: none;
                 margin-left: unset;
                 li{
+                   
                     a{
                         font-size: 1.7rem;
                     }
