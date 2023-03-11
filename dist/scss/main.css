@@ -253,6 +253,7 @@ body a {
 }
 .footer__text p {
   font-size: 2rem;
+  margin-right: 2rem;
 }
 
 .banner {
@@ -367,16 +368,7 @@ body a {
   .service .service__wrapper .grid__cards .service__card__text h3 {
     padding-top: 2rem;
   }
-  .service .service__wrapper .grid__cards .service__card:nth-child(1) {
-    flex-direction: column;
-  }
-  .service .service__wrapper .grid__cards .service__card:nth-child(2) {
-    flex-direction: column;
-  }
-  .service .service__wrapper .grid__cards .service__card:nth-child(3) {
-    flex-direction: column;
-  }
-  .service .service__wrapper .grid__cards .service__card:nth-child(4) {
+  .service .service__wrapper .grid__cards .service__card {
     flex-direction: column;
   }
   .service .service__card {
