@@ -164,14 +164,28 @@ body a {
 }
 
 .header {
-  position: relative;
   width: 100%;
   background-color: #ffffff;
   position: fixed;
   height: 7rem;
+  z-index: 99;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+.header .background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.3;
+  top: 7rem;
+  display: none;
+}
+.header .background.open {
+  right: 0;
+  display: unset;
+}
 .header__nav1 {
+  box-shadow: inset rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   position: absolute;
   background-color: #ffffff;
   width: 33rem;
@@ -211,7 +225,7 @@ body a {
 .header__nav1 .acc1 ul li:nth-child(1) {
   opacity: 0.9;
 }
-.header__nav1 .acc1 ul li:nth-child(1):hover a {
+.header__nav1 .acc1 ul li:nth-child(1):hover a i {
   color: #006241;
 }
 .header__nav1 .acc1 ul li a {
@@ -247,11 +261,11 @@ body a {
   height: 2px;
   background-color: #000000;
   display: block;
-  margin-bottom: 0.4rem;
+  margin: 0.2rem 0;
   transition: 300ms;
 }
 .header__mobile .header__banner .toggle__menu.open span:first-child {
-  transform: translateY(6px) rotate(-135deg);
+  transform: translateY(6px) rotate(-225deg);
   transition: 300ms;
 }
 .header__mobile .header__banner .toggle__menu.open span:nth-child(2) {
@@ -259,7 +273,7 @@ body a {
   transition: 300ms;
 }
 .header__mobile .header__banner .toggle__menu.open span:last-child {
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-135deg);
   transition: 300ms;
 }
 @media screen and (min-width: 970px) {
@@ -425,7 +439,7 @@ body a {
   margin-bottom: 3rem;
 }
 .service__card img {
-  width: 50rem;
+  width: 48.2rem;
   height: 25rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -514,13 +528,15 @@ body a {
 }
 .links__wrapper {
   border-bottom: 1px solid rgb(177, 177, 177);
-  padding: 3rem 0;
+}
+.links__item {
+  margin: 3rem 0;
 }
 .links__item h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 500;
+  font-weight: 600;
 }
 .links__item h4 i {
   transition: 300ms;

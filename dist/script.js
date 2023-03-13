@@ -8,7 +8,9 @@ kamote.forEach((kamoteq) => {
 
 const toggleMenu = document.querySelector(".toggle__menu");
 const headernav = document.querySelector(".header__nav1");
+const opacity = document.querySelector(".background");
 toggleMenu.addEventListener("click", () => {
   toggleMenu.classList.toggle("open");
   headernav.classList.toggle("open");
+  opacity.classList.toggle("open");
 });
