@@ -1,12 +1,11 @@
 .footer{
     background-color: $clr-light;
     &__wrapper{
-        padding: 2rem ;
         .social__media{
             padding-bottom: 2rem;
             img{
+                margin-right: 1rem;
                 width: 3rem;
-                margin-left: 2rem;
                 cursor: pointer;
                 transition: 300ms ease-in-out;
                 &:hover{
@@ -16,17 +15,17 @@
         }
     }
     &__text{
-        display: flex;
-        justify-content: space-between;
+        display: block;
         .privacy{
             
             ul{
-                display: flex;
+                display: block;
                 li{
-                    margin-left: 2rem;
-                    margin-right: 3rem;
+                    // margin-right: 3rem;
+                    margin-bottom: 2rem;
                     a{
-                        font-size: 2rem;
+                        font-size: 1.7rem;
+                        font-weight: 500;
 
                     }
                     &:hover a{
@@ -36,8 +35,23 @@
             }
         }
         p{
-            font-size: 2rem;
-            margin-right: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+    @include mediaQuery($break-lg){
+        &__text{
+            display: flex;
+            justify-content: space-between;
+            .privacy{
+                ul{
+                    display: flex;
+                    li{
+                        margin-right: 2rem;
+                        margin-bottom: unset;
+                    }
+                }
+            }
+                
         }
     }
 }

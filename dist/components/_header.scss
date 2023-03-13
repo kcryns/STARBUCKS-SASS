@@ -1,58 +1,172 @@
 .header{
+    position: relative;
     width: 100%;
     background-color: $clr-light;
     position: fixed;
-    height: 9.7rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
- &__wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: .8rem 0;
- }
- 
- &__banner{
-    display: flex;
-    align-items: center;
-    img{
-        width: 5rem;
+    height: 7rem;
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+     &__nav1{
+        position: absolute;
+        background-color: $clr-light;
+        width: 33rem;
+        height: 100vh;
+        top: 7rem;
+        right:-33rem;
+        transition: 300ms;
+        &.open{
+            right: 0;
+            transition: 300ms ;
+        }
+        .nav__mobile{
+            display: block;
+            ul{
+                margin: 3rem;
+                border-bottom: 1px solid rgb(177, 177, 177);
+                li{
+                    padding: 2rem 0;
+                    a{
+                        font-size: 2rem;
+                        font-weight: 500;
+                        transition: 100ms;
+                        &:hover{
+                         color: $clr-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .acc1{
+             ul{
+                margin: 0 3rem;
+                li{
+                    margin-bottom: 3rem;
+                    &:nth-child(1){                
+                          opacity: .9;  
+                          &:hover a{
+                            color: $clr-primary;
+                          }              
+                    }
+                    
+                    a{
+                        font-size: 1.7rem;
+                        font-weight: 600;
+                        
+                    }
+                }
+            }
+        }
+     }
+    &__desktop{
+        display: none;
     }
-    .header__nav{
-        ul{
+    &__mobile{
+        .header__banner{
             display: flex;
-            margin-left: 3rem;
-            a{
-                margin-right: 2rem;
-                text-transform: uppercase;
-                font-size: 1.4rem;
-                font-weight: 800;
-                transition: 100ms;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                width: 4rem;
+            }
+            .toggle__menu{
+                display: flex;
+                flex-direction: column;   
+                justify-content: center;
+                align-items: center;
+                width: 3rem;
+                height: 3rem;   
+                border-radius: 50%;
+                transition: 300ms;
                 &:hover{
-                    color: $clr-primary;
+                    background-color: #e6e2dafd;
                 }
-            }
-        }
-    }
- }
- .acc{
-    ul{
-        display: flex;
-        align-items: center;
-        li{
-            margin-left: 2rem;
-            a{
-                font-size: 1.4rem;
-                font-weight: 800;
-                transition: 100ms;
-            }
-            &:nth-child(1){
-                margin-right: 1rem;
+
                 
-                &:hover a{
-                    color: $clr-primary;
+                span{
+                    width: 2rem;
+                    height: 2px;
+                    background-color: $clr-dark;
+                    display: block;
+                    margin-bottom: .4rem;
+                    transition: 300ms;
+
+                }
+            &.open{
+                span:first-child{
+                    transform: translateY(6px) rotate(-135deg);
+                    transition: 300ms;
+                }
+                span:nth-child(2){
+                    opacity: 0;
+                    transition: 300ms;
+                }
+                span:last-child{
+                    transform: translateY(-6px) rotate(-45deg);
+                    transition: 300ms;
                 }
             }
+          }
         }
     }
- }
+    @include mediaQuery($break-lg){
+        
+            height: 9.7rem;
+            &__mobile{
+                display: none;
+            }
+            &__desktop{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 0;
+                .header__banner{
+                      display: flex;
+                       align-items: center;
+                      img{
+                          width: 5rem;
+                      }
+                      .header__nav2{
+                        ul{
+                            display: flex;
+                            margin-left: 3rem;
+                            li{
+                                a{
+                                 margin-right: 2rem;
+                                text-transform: uppercase;
+                                font-size: 1.4rem;
+                                font-weight: 800;
+                                transition: 100ms;
+                                    &:hover{
+                                        color: $clr-primary;
+                                    }
+                                }
+                            }
+                        }
+                      }
+                  }
+                  .acc2{
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        li{
+                            margin-left: 2rem;
+                            a{
+                                font-size: 1.4rem;
+                                font-weight: 800;
+                                transition: 100ms;
+                            }
+                            &:nth-child(1){
+                                margin-right: 1rem;
+                                
+                                &:hover a{
+                                    color: $clr-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        
+    }
+
 }
