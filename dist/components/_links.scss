@@ -257,7 +257,60 @@
                    
                     a{
                         font-size: 1.7rem;
+
                     }
+                }
+            }
+        }
+    }
+}
+
+//REWARDS
+
+.stars{
+
+   
+    h3{
+        text-align: center;
+    }
+    &__nav{
+        padding-top: 5rem;
+        background-color: #D4E9E2;
+        text-align: center;
+
+        ul{
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            li{
+                padding: 2rem;
+                border-bottom: 3px solid transparent;
+                &.active{
+                    border-bottom: 3px solid $clr-primary;
+                }
+                a{
+                    font-size: 2rem;
+                    color: $clr-dark;
+                }
+            }
+        }
+    }
+    .coffee-tab{
+        background-color: aquamarine;
+        padding: 5rem 0;
+        &__content{
+            display: none;
+            text-align: center;
+            margin: 0 2rem;
+            &.active{
+                display: block;
+            }
+            img{
+                @include imgFit(100%,100%)
+            }
+            &__text{
+                h2{
+                    margin: 2rem 0;
                 }
             }
         }

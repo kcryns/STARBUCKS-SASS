@@ -14,3 +14,28 @@ toggleMenu.addEventListener("click", () => {
   headernav.classList.toggle("open");
   opacity.classList.toggle("open");
 });
+
+const starnav = document.querySelectorAll(".star__nav__link");
+const starcontent = document.querySelectorAll(".coffee-tab__content");
+starnav.forEach((stars) => {
+  stars.addEventListener("click", () => {
+      removeActiveStars();
+      stars.classList.add("active");
+      const activeContent= document.querySelector(`#${stars.id}-content`);
+      removeActiveContent();
+      activeContent.classList.add("active");
+
+})
+
+})
+
+function removeActiveStars(){
+  starnav.forEach((star) => {
+    star.classList.remove("active");
+  })
+}
+function removeActiveContent(){
+  starnav.forEach((star) => {
+    star.classList.remove("active");
+  })
+}
