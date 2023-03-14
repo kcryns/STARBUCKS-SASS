@@ -13,6 +13,12 @@
             background-color: rgba(white, .1);
         }        
     }
+    &-primary{
+        background-color: $clr-primary;
+        color: $clr-light;
+        border-color: $clr-primary;   
+        transition: 300ms;
+    }
     &-dark{
         background-color: $clr-dark;
         color: $clr-light;
@@ -21,6 +27,13 @@
         &:hover{
             opacity: .8;
         } 
+
+    }
+    &-outlinelight2{
+        background-color: transparent;
+        color: $clr-light;
+        border-color: $clr-light;   
+        transition: 300ms;
 
     }
     &-outlinedark{
