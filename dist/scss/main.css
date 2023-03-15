@@ -17,12 +17,15 @@ a {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
 }
 
 body {
   font-family: "Nunito", helvetica sans-serif;
   font-size: 1.6rem;
   line-height: 1.4;
+  position: relative;
 }
 body a {
   color: #000000;
@@ -376,6 +379,27 @@ body a {
     margin-right: 2rem;
     margin-bottom: unset;
   }
+}
+
+.backtotop {
+  position: absolute;
+  bottom: 1rem;
+  right: 10rem;
+  width: 8rem;
+  height: 8rem;
+  position: fixed;
+  background-color: rgba(0, 98, 65, 0.3);
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #006241;
+  display: none;
+}
+.backtotop a {
+  font-size: 6rem;
+  color: #006241;
+}
+.backtotop.show {
+  display: block;
 }
 
 .banner {
@@ -845,9 +869,11 @@ body a {
     opacity: 1;
     transition: 500ms;
   }
-  .stars .coffee-tab__content__text {
-    max-width: 25rem;
+  .stars .coffee-tab__content.active img {
     margin-left: 10rem;
+  }
+  .stars .coffee-tab__content__text {
+    max-width: 35rem;
     font-size: 1.8rem;
   }
   .stars .coffee-tab__content img {
@@ -976,7 +1002,7 @@ body a {
   }
   .payment .type__payment {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1.1fr 1.1fr 1.1fr 0.7fr;
     grid-gap: 0;
     align-items: start;
   }
@@ -988,7 +1014,7 @@ body a {
 .joinstar {
   background-color: #D4E9E2;
 }
-.joinstar__wrapper .img2 {
+.joinstar__wrapper .img3 {
   display: flex;
   align-items: end;
   flex-direction: column;
@@ -998,6 +1024,8 @@ body a {
 }
 .joinstar__content h2 {
   font-size: 2.5rem;
+  max-width: 25rem;
+  margin: 0 auto;
 }
 .joinstar__content img {
   width: 20rem;
@@ -1021,6 +1049,40 @@ body a {
   }
   .joinstar__wrapper {
     background-color: #D4E9E2;
+    margin: 1.5rem;
+  }
+  .joinstar__wrapper .main__wrapper {
+    max-width: 150rem;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+  .joinstar__wrapper .main__wrapper .img3 {
+    display: none;
+  }
+  .joinstar__wrapper .main__wrapper .img2 {
+    display: none;
+  }
+  .joinstar__wrapper .main__wrapper .img1 {
+    background-image: url(../img/rewards/3star.svg);
+    background-size: cover;
+    width: 28rem;
+    height: 50rem;
+  }
+  .joinstar__wrapper .main__wrapper .img5 {
+    background-image: url(../img/rewards/4star.svg);
+    background-size: cover;
+    width: 28rem;
+    height: 50rem;
+  }
+  .joinstar__content {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+  .joinstar__content h2 {
+    font-size: 2.8rem;
+    max-width: unset;
   }
 }
 

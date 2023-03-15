@@ -1,3 +1,14 @@
+const btop =document.querySelector(".backtotop") ;
+window.addEventListener("scroll", () => {
+  console.log(window.pageYOffset);
+  if(window.pageYOffset >=100){
+    btop.classList.add("show")
+  }
+  else{
+    btop.classList.remove("show")
+  }
+})
+
 const kamote = document.querySelectorAll(".links__item h4")
 kamote.forEach((kamoteq) => {
     kamoteq.addEventListener("click", () => {
@@ -38,16 +49,4 @@ function removeActiveContent(){
     star.classList.remove("active");
   })
 }
-// function tabs(star, content) {
-//   var i, coffee, starNav;
-//   coffee = document.getElementsByClassName("coffee-tab__content");
-//   for (i = 0; i < coffee.length; i++) {
-//     coffee[i].style.display = "none";
-//   }
-//   starNav = document.getElementsByClassName("star__nav__link");
-//   for (i = 0; i < starNav.length; i++) {
-//     starNav[i].className = starNav[i].className.replace(" active", "");
-//   }
-//   document.getElementById(content).style.display = "block";
-//   star.currentTarget.className += " active";
-// }
+

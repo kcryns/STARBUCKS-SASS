@@ -1,4 +1,27 @@
+// backtotop
+.backtotop{
+    position:absolute;
+    bottom: 1rem;
+    right: 10rem;
+    width: 8rem;
+    height: 8rem;
+    position: fixed;
+    background-color: rgba(0,98,65, 0.3);
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid $clr-primary;
+   display: none;
+    a{
+        font-size: 6rem;
+        color: $clr-primary;
+      
+    }
+    &.show{
+        display: block;
+    }
+}
 
+// Banner
 .banner{
     background-image: url(../img/lQkfJOiMaudicSk7PQT5k4IDINiWdchEhrOWK5lw.jpeg);
     background: cover;
@@ -546,11 +569,14 @@
                     margin: 0 auto;
                     opacity: 1;
                     transition: 500ms;
+                    img{
+                        margin-left: 10rem;
+                    }
 
                 }
                 &__text{
-                    max-width: 25rem;
-                    margin-left: 10rem;
+                    max-width: 35rem;
+                    
                     font-size: 1.8rem;
                 }
                 img{
@@ -689,7 +715,7 @@
         }
         .type__payment{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1.1fr 1.1fr 1.1fr .7fr;
             grid-gap: 0;
             align-items: start;
             .payment__card{
@@ -704,7 +730,7 @@
     background-color: #D4E9E2;
     &__wrapper{
         
-        .img2{
+        .img3{
                 display: flex;
                 align-items: end;
                 flex-direction: column;
@@ -714,6 +740,8 @@
         text-align: center;
         h2{
             font-size: 2.5rem;
+            max-width: 25rem;
+            margin: 0 auto;
         }
         img{
             width: 20rem;
@@ -736,7 +764,43 @@
         }
         &__wrapper{
             background-color: #D4E9E2;
+            margin: 1.5rem;
+            .main__wrapper{
+                max-width: 150rem;
+                display: flex;
+                align-items: center;
+                margin: 0 auto;
+                padding: 5rem 0;
+                .img3{
+                    display: none;
+                }
+                .img2{
+                    display: none;
+                }
+                .img1{
+                    background-image: url(../img/rewards/3star.svg);
+                    background-size: cover;
+                    width: 28rem;
+                    height: 50rem;
+                }
+                .img5{
+                    background-image: url(../img/rewards/4star.svg);
+                    background-size: cover;
+                    width: 28rem;
+                    height: 50rem;
+                }
+            }
             
+        }
+        &__content{
+            max-width: 50rem;
+            margin: 0 auto;
+            h2{
+                font-size: 2.8rem;
+                max-width: unset;
+            }
         }
     }
 }
+
+// STAR CODES
